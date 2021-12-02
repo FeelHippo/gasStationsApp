@@ -43,6 +43,17 @@ export default {
         const response = await axios.put(`${API_URL}/api/updateStation`, data)
         const { data: { success }, status } = response
         return status === 200 && success
+
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async deleteGasStation(context, id) {
+      try {
+        
+        const response = await axios.delete(`${API_URL}/api/deleteStation/${id}`)
+        const { data: { success }, status } = response
+        return status === 200 && success
         
       } catch (error) {
         console.log(error)

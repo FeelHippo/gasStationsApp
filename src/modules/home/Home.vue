@@ -90,9 +90,22 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-btn x-large block :disabled="$v.$dirty && $v.$invalid" color="purple" @click="validate">
-                  Confirm
-                </v-btn>
+                <v-col cols="6" class="pl-0">
+                  <v-btn x-large block :disabled="$v.$dirty && $v.$invalid" color="purple" @click="validate">
+                    Save
+                  </v-btn>
+                </v-col>
+                <v-col cols="6" class="pr-0">
+                  <v-btn
+                    x-large
+                    block
+                    color="warning"
+                    @click="$confirm('Are you sure you want to permanently delete this station?')
+                      .then(confirm => confirm && deleteStation())"
+                  >
+                    Delete
+                  </v-btn>
+                </v-col>
               </v-row>
             </v-col>
           </v-row>
@@ -205,13 +218,19 @@ export default {
       this.stationDialog = true
     },
     async validate() {
-      const { form } = this
+      const { form, updateMap } = this
       if (this.$v.$invalid) return
       const success = await this.$store.dispatch('home/updateGasStation', form)
-      if (success) {
-        this.stationDialog = false
-        await this.$store.dispatch('home/getAllGasStations')
-      }
+      if (success) updateMap()
+    },
+    async deleteStation () {
+      const { form: { id }, updateMap } = this
+      const success = await this.$store.dispatch('home/deleteGasStation', id)
+      if (success) updateMap()
+    },
+    async updateMap() {
+      this.stationDialog = false
+      await this.$store.dispatch('home/getAllGasStations')
     },
     formatLabel(type) {
       const split = type.split('_')
