@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-autosense-dev-224247-authRole",
+      "UnauthRoleArn": "arn:aws:iam::041400279768:role/amplify-autosense-dev-224247-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::041400279768:role/amplify-autosense-dev-224247-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-autosense-dev-224247-deployment",
+      "UnauthRoleName": "amplify-autosense-dev-224247-unauthRole",
+      "StackName": "amplify-autosense-dev-224247",
+      "StackId": "arn:aws:cloudformation:eu-central-1:041400279768:stack/amplify-autosense-dev-224247/cbfd3660-53b8-11ec-89d9-0aac4e496a48",
+      "AmplifyAppId": "d3igflmyu1va9i"
+    }
+  }
+}

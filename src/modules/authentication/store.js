@@ -1,6 +1,5 @@
 import axios from 'axios'
-// const API_URL = 'http://ec2-3-71-33-23.eu-central-1.compute.amazonaws.com'
-const API_URL = 'http://localhost:3000' // remove in prod
+const API_URL = 'http://ec2-3-71-33-23.eu-central-1.compute.amazonaws.com'
 
 export default {
   namespaced: true,
