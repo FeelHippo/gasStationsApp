@@ -80,7 +80,8 @@ export default {
       let success
       if (tab === 0) {
         success = await this.$store.dispatch('authentication/signIn', userData)
-        if (success) this.$router.replace({ path: '/home' })
+        if (success) return this.$router.replace({ path: '/home' })
+        this.$confirm('Wrong Credentials', { icon: 'warning', buttonFalseText: '', buttonTrueText: 'OK' })
       }
       if (tab === 1) {
         success = await this.$store.dispatch('authentication/signUp', userData)
