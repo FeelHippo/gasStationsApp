@@ -1,3 +1,5 @@
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import 'leaflet/dist/leaflet.css';
 import Vue from 'vue'
 import App from '@/App'
 import router from '@/router'

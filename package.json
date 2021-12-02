@@ -12,7 +12,8 @@
     "core-js": "^3.6.5",
     "eslint-config-cleancise": "^1.0.5",
     "eslint-plugin-import": "^2.24.2",
-    "material-design-icons-iconfont": "^6.1.0",
+    "leaflet": "^1.7.1",
+    "material-design-icons-iconfont": "^6.1.1",
     "sass": "^1.42.1",
     "stylelint": "^13.13.1",
     "stylelint-config-rational-order": "^0.1.2",
@@ -22,6 +23,7 @@
     "vue": "^2.6.11",
     "vue-cli-plugin-vuetify": "^2.4.4",
     "vue-router": "^3.5.2",
+    "vue2-leaflet": "^2.7.1",
     "vuelidate": "^0.7.6",
     "vuetify": "^2.5.8",
     "vuetify-confirm": "^2.0.6",
@@ -35,8 +37,8 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "sass-loader": "^10.2.0",
-    "vue-template-compiler": "^2.6.11",
     "vue-cli-plugin-vuetify": "^2.3.1",
+    "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.2"
   },
   "eslintConfig": {
