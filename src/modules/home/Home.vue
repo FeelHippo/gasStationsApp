@@ -219,7 +219,7 @@ export default {
     },
     async validate() {
       const { form, updateMap } = this
-      if (this.$v.$invalid) return
+      if (this.$v.$invalid) return this.$v.$touch()
       const success = await this.$store.dispatch('home/updateGasStation', form)
       if (success) updateMap()
     },
