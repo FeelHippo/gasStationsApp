@@ -1,6 +1,6 @@
 import axios from 'axios'
 import LocalStorage from '@/utils/storage'
-const API_URL = 'http://ec2-3-71-33-23.eu-central-1.compute.amazonaws.com'
+const API_URL = 'http://localhost:3000'
 
 export default {
   namespaced: true,
